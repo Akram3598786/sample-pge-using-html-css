@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first web homepage</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            background: url('img/backgroung.jpg');
+            font-family: 'Baloo Bhai 2', cursive;
+            
+        }
+        header{
+            /* border: 1px solid white; */
+        }
+
+        .left{
+            /* border: 2px solid green; */
+            /* background-color: hotpink; */
+            display: inline-block;
+            position: absolute;
+            left: 25px;
+            top: 13px;
+
+        }
+        .left img{
+            height: 50px;
+            width: 50px;
+            padding-left: 62px;
+            
+        }
+        .left p{
+            left: 50px;
+            margin-top: 6px;
+            text-size-adjust: 25px;
+        }
+        
+
+        .mid{
+            display: block;
+            width: 600px;
+            margin:  12px auto;
+            overflow: auto;
+            
+
+            /* background-color:hotpink; */
+            /* border: 2px solid green; */
+           
+        }
+
+        .navbar{
+            display: inline-block;
+            
+        }
+        .navbar li{
+            
+            list-style: none;
+            float: left;
+            padding: 12px;
+            
+            
+             
+            
+        }
+        .navbar li a{
+            color: white;
+            size:20px;
+            text-decoration: none;
+            
+
+        }
+       
+        .navbar li a :hover, .navbar li a :active{
+            color:blue;
+            
+            text-decoration: underline;
+    
+        }
+        
+
+        .right{
+            border:2px green;
+                   
+            position: absolute; 
+            right: 34px;
+            top: 15px;
+            display: inline-block;
+            
+        }
+
+        input{
+            border-radius: 7px;
+            padding: 4px;
+                   
+        }
+
+        .container{
+            display: inline-block;
+    border: 2px solid white;
+    width: 350px;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+        }
+
+        .container h4{
+            margin-bottom: 25px;
+            
+        }
+
+        .form input{
+            text-align: center;
+    width: 300px;
+    padding: 5px;
+    margin: 5px;
+
+
+        }
+         .button{
+            border: 1.5px solid blue;
+    cursor: pointer;
+    width: 250px;
+    margin-top: 4px;
+    display: inline-block;
+    overflow: auto;
+    cursor: pointer;
+        }
+
+         .button :hover{
+            background-color: yellow;
+        }
+        .button :active{
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="header">
+    <!-- for left portion -->
+    <div class="left">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABXFBMVEX////dPDAfkuz/wQYop0XhOSfkNx+rXH1tda8ElfHcMyXbLBzpi4bzwLz/vwD/wwDjNS+sZTcWqkZygz3cNzEAjOvzlRfpcCX//fXcNyr/yTAAiuvbKRjcMCH/8c7/++8AoTH/1nD76unpvg4XpDsAj/b98/IApUfbJBHuqKT43NouqEP77OvldW4AoC652fjCuSDq9f3r9+7hWlHrmJPaHwbkamLfSkD0yMb/7L3/z1T/46D/yz1Js2CUz6De7fxDoe9+xYy438Da7t6r2bRwoLdkrvGo0PaAu/N1w4XtoZ3ngXuRxPTiY1v/24P/9uGrrYJYm8nluy1frDrZ6fJbuG61r3iOppsqlOTFs1+iq4vJ4vrRtldPmc+EpKbau0aSk2G9jSnakDqLf4NccbyOibPXbSmgWYNknr6IpaS8sWzauEg3ltqyrntyeZrMjkqkyeXdkh7KZ0TD1piB+FcSAAAM6ElEQVR4nO2d+3fTxhLHLce0jWRbkKIWYasYI7t+YIJjx3YpIc4DEuIYSHoDAUK4j96S0nCf//85V5IdW9pdSTsrCYnc/f7WA6386ezOzu7MzqZSXFxcXFxcXFxcXFxcX55u3LoV90+IVD89WMjnH/4c98+ITrfz+YUFk/FG3L8kIt02+Uzlb15OxBmgiXgZZ6MN8HIiOgC/2IG6srXi9kcIoBdie70d0e8Lqs01Xdczj4iQGKAr4s5QUZT0TrQ/lU0b9zKm9NLTLezPCIDEubi+a9CZUobJs+OjUmYqvbS27TQkERBHXH4y5bMQP+Nvp9LKvcxcTT2zYTOkC6BzoLb3j2d4pgrLMVB46ZGecUjX1zanf+QKaEN8azPfVMOYSNyUwdTUdcvreABOB2p757iA8hnj9G3cTA5t6jii5XU2n3kBGrr5p13MfBPC3bihHDpqkggzmaX7XoCyLL88IPOZSpI73SKaMJP58b7sxXf46tidL60kaVHcIBN6Acry6zMPvIT5mhXyGHUHNMz35rzizWcsGMnxNdtEE7oCyvLJ43TBB88cpk/iBptpDQBoeJdP73yG58yISfE1WyVqQGN4nnp5F8SI+3GjTfWUMEhJgIb5Ph74zj6H4kabaIUO0Fwc/L0LYsRkBKdoSEoENBYHKu+CaBg3nCXcz6CAxvB8cU49+xxGXI+bztBmaQnVfdmp96eLFWWRRZ8/OG3kMP35W1R/+c6hv/7t12/YhX+wUY2Ob9CpSZiu4rrulPhVAOEfrAn1qADrRVVIgtRiKxrAQTFutJmkbiSEnWRY0FKxHAFgoxY3lk1SFFMxJ8WNZZMYxTBNFmGWE3JCThi3OCEn5ITxixNyQk4YvzghJ+SE8SsKwuW/fxU3lk3qtW3XEjommeU83ySJ8Oq1kqMoKaCscp7FhBEu2YuSAqm9M7TKeZJHmMk0S0vkUkiA1nfT05RREgkzk6KkAHz2YsGEEloVdIxep72ftmf8QiJULQX+z9gILUhCTauv9pFiuqCEqqhJoir0LRn/qEmayE7qJDQY7x1B68Z30Yx0IEJREjuj+qBRvkj9VcuNwd6ooxYZKVFCg3ENBvgWS7mzE6pFYZQjZ1LKg2ynpoVCmNE3QIRDLKPOSqjWxjnPpG2jq8LzkgTCjA7xN228qoCNUC22Gv6fy3UkICORELJsrIdEKI0p+EwN+rC4nki4DSAMx4aqCsjy1QUxKCFo6ccAGQi1DqUBJyr3AFl0IiFoTdzHjAgmlMDlBPXVIIRN2HLRDrxaSCMooDEbqScjgbAEjE+foEYEEmoMgIYVaREJhEvAb70NRij2WABTqTHlqnH9N7TwWn8E/Ra65oMIVeEuG2GdMsC5/v0dBLEE3l/sKAEIizk2wFSDmlB2IupPwd9qB7Ch6uJGG7m9bKvX67Wyey71dw3KRdEgdCLCFsOJdtl3TzVSnN3I9mvmjsmUsZOqqS1CvAqw4YIDEbizsLTOTCgS/Gi5JaEbJVUSsuj/Ctr1wiS0I4IitpmGrIQ1PJbJacThJ4ojp0sa0Y/SBTsiaF8x07LCRqh2cEDXmjix1rWN1TJtbDohnCEy+BlLjIT4iftdr5MZTZg73h7tJmpKeIF4j/FweJ/tJErCloqup/9Qi72B9deqLert/gXhFJHFz5hqMxJinrTvYxpVG9cHg3qf/jxjRmghsvkZU/bgFOBp0Hjmrv+eQdUkSQPs8+eEJiI0JJ3rLQuh2keXuUb45dM2QgMRHJLO9OychRBzpRFUF9sJF/IPWduI3M6/KYRBWI2YkLmNyO28fBiKDan3RADC3xz3jtgQzXv08mN4ZgafhxHcY7jy4c6CExE+UK1GAfJJAUwoqHjcHfpdlCsf3sgBEaedEORzOGGRcMQ26EPPfH0Ivz5H7v9BB+pFqwf5RQVMqJFOSat1oQg5EPUlrLwOhDjvZSEzjFKX/e9gpGE7KHbCxTP0EicE0dasQ/4dnuVWXTMxgyx7Qg0lTB/iiLRz0d6NRH4PJ8RDb5vKuexYLUIiNBdC5RV21ZgW0dluRT5QwDbs+3zh7qDbkwJNS9OG5ygg7UBF+snIHytQQqp7V9VBVqgxm9IkrHzEL8TTIGINc6YLBuw0ke7yXGOvz5jMNwmVA0JPA3/En7B+MvIrBUyodmjv6jayTCulSZiuvCchPvP54gOc8BBuQ0GjTzxVcx14xGMRKqfEzhveRrxB+DfkM4aqLw2SuBh0oIGrRZhWSIT5557fukVoeiSfVOCEgihALrLmRJhnnRAWXpCG6Q9gwomvAWdI1SLkJmt1BErkTwjTaHBKYcPUQ5IRXxSY8vhSZwBgpE072QmVE8KC4bPq/0wy4k0WGwqmGccARvoM8JzwMR7XPPD7DtGIp6wVtKrUr1M3eRjQ5/GnhGksOM37DVLDm97EEeU/2GuEVW21510UNVed2qVeEBbQjbCPn3FHPFACVO6pUrFXp+rX0aL1qDMbOn0NFaDhT3FE+WUQQhNSK/ZH/pQN2qV/RugITikByYjHgStozbRof9wdeC6TWUojzggV20aYGpA0UOVXlTBqhFVVlDRh5D4vaXPAM8J0ZeZrAIAERPkwFMIJpiitduoupqRsLzInVH6XGQBJiGehVrIb87JFXCq9E3EEwnRaZgHE56L8+teQa/XVYo907Ei37NsIlU8yCyAB8R9XwiU0gnMNNyNlFsdO+E5mAsQGqvzPq2ETCsIqPhvp4hr7KDWCUyZAFFH+7nr4hCK+UWYgfCyzASIDNRJCQcDWDfAoTaePDxkBU6mtO3LEhCLmbOA2TCv/YgVMbehzRBChKlIeoYnYRGQgTA9ZAVf0THOGCCBUtXE22xOoztDQUVpmGKXs7XjN5rkzRHpCtW8tAtW64Lt6q9h5FWUy1UnI3I53UiA+RaQmVGdHUNWs3zHhKrYgUp5lOAlZ2/FOm+dOEakJ7XmZxrjmxUgo56es+0IIGdvxHukZGyItIVKo0Oi5n9sTAKtU38AI2drxzpvnWoi0hFgGuJHtk1KGqka6UUN76R8lZGrHa2ueayLSEhbxWLNq3sGzyoOncMZmuNbvkordaYsTMRuy+Bp781wDkZqQfBXobm5vNO6LxdXVmtYfZ+vkv0V9oIgRMrTj3XQ06TYQ2W1IL+rSIpwQ3o4Xec+heYeS0DPF7SP4aaJN0AUD67Pe/DelL2XvDwuoYcQJwW9FYO85LH1LuT/UQHfybKr6Fdp6EqaHwM+hgPSEap+xP2wHkGAjEAKDU/w9B2pCYzFgcTZVCCCJEBicrmFvctATCmptDwzYAAxRMmFagfgawmMAAEJo5jBlXjyEpfKJhJC4hvAyDojQiMlobqlfqDGGdmgiEkK8aVAbGhIvblH4qtxirMUIYkPCE1xQQqtbRNffkIPWKkP5F5EQFLhtYw+rwAnNsVrrZ11aYpiqmvsO5pqoYL40tYaOUxZCwUrDiJ1Wd9BAOKuNQbdH3FYxEwLDtpW1UjMMQovSbEajCv1OrzXKZrOjVq/TF0TQHRlfQiXNsLlY0/VwCGegxsbQVAhdhpCTKOWY7RhjayOjN8MjDFOOU33lCfuDOyvbayU92YRKej/gWzRbTyeMiSRUCsMw3ktaedQ0BmsCCRVlN7SnhDaPdD1phMpwJ9Rn2bY2Ekb4JPynAy99/1JO+HnFCTkhJ4xfnJATcsL4xQk5ISeMX5yQE/6fEibqHVINnoP1V1VI0Fuyq6zlEJ6ir3aJXICr4iC1kjITtT5jA1hfdYuSiOlKEKnIE974G9/4B7XVVlSAqVS53s2i+ppdHz7853unrmHCvpfdi2QOemiH7eX7xcXK4ul72alflhDpR5+ZhiS0HS+dFOXdJwPJeUHulx/R3DpL89zwtYs34fdT4fjxCYpHAmRuahmuCA8peJuvcv7mEOcjAbI3tQxX+HMfnnxnrxdIHTsIgIzNc8PXMrURFeX41R2C+dwAGZvnhi9qvoOXmHfxAMyUwntZLaDwtyIIqhyf/uGC5wIIfM8hShGeNEHNVzl/cdOVjwyYkKViIuytCHR4nhEWBz/ATCZuLJuwtyLseIVzN+/iDQh/zyFKuS4Yhnf56OZdfCwIezcmaqFvRVzwpfdP8p54efm/s6IkBDAJIelcpOBUKQx3iG1E7IDmLezNo3sExiT5GVO7uPmm5TykfjcOwJRZlGSroEugnzG17nhcSLGX87gj2hsFmEVJyfUzpmwLhqI4y3ncBirSCWFro2ljbH7en0+joTLzLmg1FhkRb/UwL4XUk+VIp9pVTBGLBUkDldzLYuupbuooIZsKRO3lnWWXYkEc0bVZx8rm9mYSDegnFJGxG0mS5ZyLlxDQiXgpAe0D9ZICzhEvLaCB+Mygy+cf+DZv/IJ14/kPz1kfFOHi4uLi4uLi4uLi4opR/wOMmvA9RpX0UQAAAABJRU5ErkJggg==" alt="">
+    <p>SoftColabs Technologies</p>
+</div>
+    <!-- for middle portion -->
+    <div class="mid">
+        
+        <ul class="navbar">
+        <li><a href="#">All Products</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Clothes</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>
+    
+    </div>
+
+    <!-- for right portion -->
+    <div class="right">
+    <input type="text" placeholder="Search">
+
+    </div>
+</header>
+<div class="container">
+    <h4>Course Registration</h4>
+<form action="stylesheet.css" class="form">
+
+    <input type="text" placeholder="Name">
+    <input type="number" placeholder="Age">
+    <input type="text" placeholder="Gender">
+    <input type="email" name="Email" id="email" placeholder="Email"> 
+    <input type="text" placeholder="Address">
+
+   <p> <buttton class="button"> Submit </buttton></p>
+    
+       
+    
+</form>
+</div>
+</body>
+</html>
